@@ -7,3 +7,4 @@ export * from './lib/ny-severity-selector.component';
 export * from './lib/ny-severity-selector.module';
 
 export * from './severity-selector/severity-selector.module';
+export * from './severity-selector/severity-selector/severity-selector.component';
