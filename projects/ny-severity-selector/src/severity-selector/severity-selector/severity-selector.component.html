@@ -1,0 +1,27 @@
+<div class="slide">
+    <input
+        [(ngModel)]="value"
+        type="range"
+        [min]="min"
+        [max]="max"
+        [step]="step"
+        [value]="value"
+        (ngModelChange)="changeValue()"
+    />
+</div>
+<div class="numbers">
+    <div *ngFor="let number of numbers; let i = index" class="number" [style.left]="getLeftPosition(i) + '%'">
+        <div class="line"></div>
+        <div class="text">{{ number }}</div>
+    </div>
+</div>
+<div class="ranges">
+    <div
+        *ngFor="let range of ranges; let i = index"
+        class="range"
+        [style.left]="'calc(' + getRangeLeftPosition(range.min) + '% + 3px)'"
+        [style.width]="'calc(' + getRangeWidth(range.min, range.max) + '% + 1px)'"
+    >
+        <div class="text">{{ range.text }}</div>
+    </div>
+</div>

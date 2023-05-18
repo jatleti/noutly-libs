@@ -1,0 +1,10 @@
+<div style="width: 400px">
+    <ny-severoty-selector
+        (valueChange)="onValueChange($event)"
+        [min]="1"
+        [max]="10"
+        [step]="1"
+        [value]="5"
+    ></ny-severoty-selector>
+</div>
+{{ value | json }}
